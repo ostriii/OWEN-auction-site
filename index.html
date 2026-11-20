@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse antique listings and try a demo bid on Curio Shelf.">
+  <title>Curio Shelf | Antique Auctions</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top">Curio Shelf</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#listings">Listings</a>
+        <a href="#simple-guide">A simple guide</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <h1 id="page-title">Antique Auction</h1>
+      <p>Choose an item to see its details or place a demo bid.</p>
+    </section>
+
+    <section class="market-section" id="listings" aria-labelledby="listings-title">
+      <div class="section-heading">
+        <h2 id="listings-title">Items for sale</h2>
+        <p id="item-count" aria-live="polite"></p>
+      </div>
+
+      <div class="filters" role="search">
+        <label class="search-field">
+          <span>Search</span>
+          <input id="search-input" type="search" placeholder="Search items" autocomplete="off">
+        </label>
+        <label class="category-field">
+          <span>Category</span>
+          <select id="category-filter">
+            <option value="all">All categories</option>
+            <option value="Clocks &amp; Watches">Clocks &amp; Watches</option>
+            <option value="Ceramics">Ceramics</option>
+            <option value="Decorative">Decorative</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="listing-grid" id="listing-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>No items found. Try another search.</p>
+    </section>
+
+    <section class="guide-section" id="simple-guide" aria-labelledby="guide-title">
+      <h2 id="guide-title">A simple guide</h2>
+      <p>Click an item, enter a higher bid, and press “Place demo bid.” This is a practice bid only.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Curio Shelf — antique auction website demo.</p>
+    <p class="photo-credit">Sample photos: <a href="https://commons.wikimedia.org/" target="_blank" rel="noreferrer">Wikimedia Commons</a> and <a href="https://www.metmuseum.org/about-the-met/policies-and-documents/image-resources" target="_blank" rel="noreferrer">The Met Open Access</a>.</p>
+  </footer>
+
+  <dialog class="item-dialog" id="item-dialog" aria-labelledby="dialog-title">
+    <div id="dialog-content"></div>
+  </dialog>
+</body>
+</html>
